@@ -76,7 +76,7 @@ homeModule.config([
                     };
 
                     $scope.browseFiles = function() {
-                        window.location.replace = "https://www.metroite.de/#datapack-list-amp-download";
+                        window.location = "https://www.metroite.de/#datapack-list-amp-download";
                     };
 
                     $scope.download = function() {
