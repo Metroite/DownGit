@@ -30,7 +30,7 @@ homeModule.config([
                     $scope.downloadedFiles = {val: 0};
                     $scope.totalFiles = {val: 0};
 
-                    var templateUrl = "https?://github.com/.+/.+";
+                    var templateUrl = "https?://github.com/Metroite/.+";
                     var downloadUrlInfix = "#/home?url=";
                     var downloadUrlPrefix = "https://download.metroite.de/"+downloadUrlInfix;
 
