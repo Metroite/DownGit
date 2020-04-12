@@ -75,10 +75,6 @@ homeModule.config([
                         }
                     };
 
-                    $scope.browseFiles = function() {
-                        window.location = "https://www.metroite.de/#datapack-list-amp-download";
-                    };
-
                     $scope.download = function() {
                         window.location = downloadUrlInfix+$scope.url;
                     };
