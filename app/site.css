@@ -40,13 +40,6 @@ img {
     right: 1em;
 }
 
-.home .bottom-center{
-  position: fixed;
-  bottom: 1em;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .home .top-left{
     position: absolute;
     top: 1em;
