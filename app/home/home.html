@@ -1,15 +1,27 @@
 ﻿<div class="home">
 <div class="text-center">
-
+    <div class="top-right"><iframe src="https://ptb.discordapp.com/widget?id=568512487473938482&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe></div>
+    <div class="top-center"><ul id="parent">
+    <a href="https://github.com/Metroite/datapacks/blob/master/LICENSE" alt="License">
+        <img src="https://img.shields.io/github/license/Metroite/datapacks" /></a>
+    <a href="https://github.com/Metroite/datapacks/releases" alt="Tag">
+        <img src="https://img.shields.io/github/tag/Metroite/datapacks" /></a>
+    <a href="https://github.com/Metroite/datapacks" alt="Activity">
+        <img src="https://img.shields.io/github/commit-activity/m/Metroite/datapacks?foo=bar" /></a>
+    <a href="https://discord.gg/vBgb85N">
+        <img src="https://img.shields.io/discord/568512487473938482?logo=discord"
+            alt="chat on Discord"></a>
+        </ul></div>
+    <div class="top-left"><a href="https://www.patreon.com/metroite"><img src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Fshieldsio-patreon.herokuapp.com%2FMetroite&style=for-the-badge" alt="pledge on Patreon"></a></div>
     <div class="vertical-space"></div>
-    <div class="center-row"><img src="https://raw.githubusercontent.com/Metroite/DownGit/master/res/images/metroite.png" alt="Metroite"></div>
+    <div class="center-row"><a href="https://www.youtube.com/channel/UCfdVx0XNqSwuoftDcLgiXfg"><img src="https://raw.githubusercontent.com/Metroite/DownGit/master/res/images/metroite.png" alt="Metroite"></a></div>
     <div class="btn-group center-row">
         <button type="button" class="btn btn-outline-light" style="color:gray" ng-click="browseFiles()"><h3>Browse Files</h3></button>
     </div>
 
     <div ng-show="isProcessing.val">
         <div class="vertical-space"></div>
-        <img class="processing-img" src="res/images/processing.gif" />
+        <img class="processing-img" src="res/images/processing.webp" />
         <p>Downloaded {{downloadedFiles.val}} of {{totalFiles.val}} files</p>
     </div>
 

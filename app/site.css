@@ -24,7 +24,7 @@ img {
     color: grey;
     background-color:#D8D8D8;
     border-color: grey;
-    
+
 }
 /**********************************/
 
@@ -32,6 +32,30 @@ img {
     float: none;
     margin: auto;
     padding-bottom: 1em;
+}
+
+.home .top-right{
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.home .top-center{
+  position: absolute;
+  top: 1em;
+  left: 50%;
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.home .top-left{
+    position: absolute;
+    top: 1em;
+    left: 1em;
 }
 
 .home .vertical-space{
@@ -67,6 +91,3 @@ img {
     background-image: url("../res/images/warning.png") !important;
     background-color: #8c8c8c;
 }
-
-
-
