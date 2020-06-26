@@ -52,30 +52,7 @@ downGitModule.factory('downGitService', [
 
             return info;
         }
-        token = "ba96768b5e47" + "2c850a06e6" + "cc3be71d6e0e" + "4a3cbf";
-        var _callAjax = function(url, params, type){
-            return new Promise(function(resolve, reject){
-                var xmlhttp,
-                    token = "ba96768b5e47" + "2c850a06e6" + "cc3be71d6e0e" + "4a3cbf";
 
-                // compatible with IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function(){
-                    if (xmlhttp.readyState == 4){
-                        if(xmlhttp.status == 200){
-                            resolve(xmlhttp);
-                        }else if(xmlhttp.status >= 400){
-                            reject(xmlhttp);
-                        }
-                    }
-                }
-                xmlhttp.responseType = (typeof type !== "undefined") ? type : "json";
-                xmlhttp.open("GET", url + _getRequestUri(params), true);
-                if ( token ) xmlhttp.setRequestHeader("Authorization", "token " + token);
-                xmlhttp.send();
-            });
-        };
-        
         var downloadDir = function(progress){
             progress.isProcessing.val = true;
 
