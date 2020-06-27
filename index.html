@@ -235,6 +235,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
           </ul>
+          <p class="navbar-text navbar-left">can be used as an alternative download method
+            <!-- <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> -->
+          </p>
           <form class="navbar-form navbar-right" role="search" id="urlForm">
             <div class="form-group">
               <input id="urlInput" onclick="this.select();" type="text" class="form-control" placeholder="https://github.com/Metroite/datapacks">
@@ -566,7 +569,8 @@
         var token_param = "ba96768b5e47" + "2c850a06e6" + "cc3be71d6e0e" + "4a3cbf";
         window._ghpageAccessToken = token_param;
 
-        viewHandler.call(this, $("https://github.com/Metroite/datapacks").val());
+        // pls render
+        renderCells.call(this, $("https://github.com/Metroite/datapacks").val());
 
         // handle download parameter
         if(params['download']){
