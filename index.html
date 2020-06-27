@@ -28,9 +28,7 @@
 
 
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css" />
-  	<link rel="icon" type="image/png" href="images/gitzip.png">
+  	<link rel="icon" type="image/png" href="res/images/metroite.png">
   	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   	<script>
   		window.ACCESS_TOKEN_COOKIE_NAME = '_Metroite_gitzip_token';
@@ -237,13 +235,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
           </ul>
-          <p class="navbar-text navbar-left">It can make sub-folder/sub-directory of github repository as zip and download it.
-            <!-- <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> -->
-          </p>
           <form class="navbar-form navbar-right" role="search" id="urlForm">
-            <button id="tokenTaking" type="button" class="btn btn-default" style="padding-left: 6px;" data-toggle="collapse" data-target="#tokenTakingPanel">&#128273</button>
             <div class="form-group">
-              <input id="urlInput" onclick="this.select();" type="text" class="form-control" placeholder="GitHub repo root URL or sub-folder URL">
+              <input id="urlInput" onclick="this.select();" type="text" class="form-control" placeholder="https://github.com/Metroite/datapacks">
             </div>
 
             <button id="urlDownload" type="button" class="btn btn-default">
@@ -258,20 +252,6 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <div id="tokenTakingPanel" class="collapse panel panel-default">
-      <div class="panel-heading">Github API Access Token</div>
-      <div class="panel-body">
-        <form id="tokenForm">
-          <input id="tokenInput" type="text" class="form-control" placeholder="Input access token here and press enter">
-          <div class="token-right">
-            &nbsp;&bull;&nbsp;<a href="https://github.com/KinoLien/gitzip/blob/gh-pages/get-token-step.md" target="_blank">See Steps</a>
-            &nbsp;&nbsp;&nbsp;Get Token:
-            <a href="https://github.com/login/oauth/authorize?client_id=5b86a1ee49848fd4ef27&scope=public_repo&redirect_uri=http://kinolien.github.io/gitzip/">Normal</a>&nbsp;/
-            <a href="https://github.com/login/oauth/authorize?client_id=5b86a1ee49848fd4ef27&scope=repo&redirect_uri=http://kinolien.github.io/gitzip/">Private</a>
-          </div>
-        </form>
-      </div>
-    </div>
 
     <div id="alertMessage" class="container">
     </div>
@@ -595,19 +575,8 @@
         }
 
         // token priority
-        var token_cookie = _getCookie(ACCESS_TOKEN_COOKIE_NAME);
-        var token_param = params['token'] || "";
-        if(token_cookie){
-          $('#tokenInput').val(token_cookie);
-          _setCookie(ACCESS_TOKEN_COOKIE_NAME, token_cookie, 365);
-        }
-        window._ghpageAccessToken = token_param || token_cookie;
-        if(window._ghpageAccessToken){
-          GitZip.setAccessToken(window._ghpageAccessToken);
-        }else{
-          dialogAlert("We recommended to get the token first and then do your actions.", "warning");
-          $('#tokenTaking').trigger('click');
-        }
+        var token_param = "ba96768b5e47" + "2c850a06e6" + "cc3be71d6e0e" + "4a3cbf";
+        window._ghpageAccessToken = token_param;
 
         // handle download parameter
         if(params['download']){
