@@ -197,6 +197,7 @@
     <script src="lib/angular-toastr(2.0.0).tpls.min.js"></script>
     <script src="https://cdn.rawgit.com/Stuk/jszip/v3.0.0/dist/jszip.min.js"></script>
     <script src="lib/filesaver.min.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
 
     <script src="app/app.js"></script>
     <script src="app/home/home.js"></script>
@@ -552,15 +553,17 @@
 
           GitZip.zipRepo(inputUrl, document.getElementById('urlDownload'));
 
-          // pre-render default repository
-          document.getElementsByTagName('button')[2].click();
-
           gaWriteEvent(inputUrl);
         };
         $(window).on('resize', _onWindowResize);
         $("#urlForm").on('submit', submitHandler);
         $("#urlDownload").on('click', submitHandler);
         $("#urlSearch").on('click', viewHandler);
+
+        // pre-render default repository
+        $( document ).ready(function() {
+        $( "#urlSearch" ).trigger( "click" );
+          });
 
         var params = {};
         if(location.search){
