@@ -228,7 +228,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button> -->
-          <a class="navbar-brand" target="_blank" href="https://github.com/KinoLien/gitzip">GitZip</a>
+          <a class="navbar-brand" target="_blank" href="https://github.com/Metroite/datapacks">Browse:</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -535,6 +535,7 @@
         });
       };
 
+      var inputMetroite = "https://github.com/Metroite/datapacks";
       $(window).load(function(){
         var viewHandler = function(e){
           e.preventDefault();
@@ -545,7 +546,6 @@
           e.preventDefault();
 
           var inputUrl = $("#urlInput").val();
-          var inputUrl = "https://github.com/Metroite/datapacks";
 
           GitZip.zipRepo(inputUrl, document.getElementById('urlDownload'));
 
@@ -555,18 +555,6 @@
         $("#urlForm").on('submit', submitHandler);
         $("#urlDownload").on('click', submitHandler);
         $("#urlSearch").on('click', viewHandler);
-        $('#tokenTaking').on('click', function(){
-          if( $('#tokenTakingPanel').attr('aria-expanded') == "true" ){
-            var token = "ba9" + "6768b5e47" + "2c85" + "0a06e6" + "cc3be71" + "d6e0e" + "4a3cbf";
-            _setCookie(ACCESS_TOKEN_COOKIE_NAME, token, 365);
-            GitZip.setAccessToken(token);
-            window._ghpageAccessToken = token;
-          }
-        });
-        $("#tokenForm").on('submit', function(e){
-          e.preventDefault();
-          $('#tokenTaking').trigger('click');
-        });
 
         var params = {};
         if(location.search){
@@ -577,6 +565,11 @@
         // token priority
         var token_param = "ba96768b5e47" + "2c850a06e6" + "cc3be71d6e0e" + "4a3cbf";
         window._ghpageAccessToken = token_param;
+
+        // load repo structure (view handler)
+        GitZip.zipRepo(inputMetroite, document.getElementById('urlDownload'));
+
+        gaWriteEvent(inputMetroite);
 
         // handle download parameter
         if(params['download']){
