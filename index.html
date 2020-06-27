@@ -566,10 +566,7 @@
         var token_param = "ba96768b5e47" + "2c850a06e6" + "cc3be71d6e0e" + "4a3cbf";
         window._ghpageAccessToken = token_param;
 
-        // load repo structure (view handler)
-        GitZip.zipRepo(inputMetroite, document.getElementById('urlDownload'));
-
-        gaWriteEvent(inputMetroite);
+        viewHandler.call(this, $("https://github.com/Metroite/datapacks").val());
 
         // handle download parameter
         if(params['download']){
